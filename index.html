@@ -1,0 +1,50 @@
+<!doctype html>
+<link rel="stylesheet" href="stylesheet.css">
+<html>
+<head>
+<title>Make A story</title>
+<script>
+function loadStory(){
+var storyName = document.getElementById("name_input").value
+var storyHTML = localStorage.getItem(storyName)
+document.getElementById("story_editor").value = storyHTML
+}
+function saveStory(){
+var storyName = document.getElementById("name_input").value
+var storyHTML = document.getElementById("story_editor").value
+localStorage.setItem(storyName,storyHTML)
+}
+
+function Clear() {
+  var storyHTML = document.getElementById("story_editor").value = "";
+
+}
+function displayStory(){
+var storyHTML = document.getElementById("story_editor").value
+document.getElementById("story_display").innerHTML = storyHTML
+}
+</script>
+<style>
+textarea{
+width:500px;
+height: 200px;
+background-image: url("Capture.PNG");
+background-repeat: no-repeat;
+}
+</style>
+</head>
+<body>
+<h1> Edit your story! </h1>
+Name your story:<input id=name_input/>
+<section>
+<button onclick="loadStory()">Find and Edit It</button>
+<button onclick="saveStory()">Save It</button>
+<button onclick="displayStory()">Display It</button>
+<button onclick="Clear()">Clear it </button>
+
+</section>
+<textarea id="story_editor" placeholder="Write a dope story."></textarea>
+<section id="story_display"></section>
+
+</body>
+</html>

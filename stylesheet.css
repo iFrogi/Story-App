@@ -1,0 +1,19 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(JMHTypewriter-Black.ttf);
+}
+h1 {
+  color: #ada7a7;
+  font-family: myFirstFont;
+}
+body {
+  color:#ada7a7;
+  background-image: url("giammarco-zeH-ljawHtg-unsplash (1).jpg");
+  background-size: cover;
+  font-family: myFirstFont
+}
+
+
+input {
+  font-family: myFirstFont
+}
